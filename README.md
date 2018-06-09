@@ -38,7 +38,7 @@ const store = createStore((state = { counter: 0 }, action) => {
 const ConnectedApp = withStore(store)(App)
 
 render(
-  <App />,
+  <ConnectedApp />,
   document.getElementById('root')
 )
 ```
