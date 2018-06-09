@@ -42,3 +42,20 @@ render(
   document.getElementById('root')
 )
 ```
+
+Optionally, you can pass `mapStateToProps` and `mapDispatchToProps` functions:
+
+```js
+const mapStateToProps = (state) => ({
+  items: state.items.filter(({ visible }) => visible)
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  onAddItem: (content) => dispatch({
+    type: 'ADD_ITEM',
+    payload: content
+  })
+})
+
+const ConnectedApp = withStore(store, mapStateToProps, mapDispatchToProps)(App)
+```
