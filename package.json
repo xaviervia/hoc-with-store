@@ -1,0 +1,23 @@
+{
+  "name": "hoc-with-store",
+  "version": "0.0.1",
+  "description": "Higher-order React component for binding a Redux Store",
+  "main": "dist/index.js",
+  "repository": "https://github.com/xaviervia/hoc-with-store",
+  "author": "Fernando Via Canel <fernando.via@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.0.0"
+  },
+  "devDependencies": {
+    "react": "^16.0.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1"
+  },
+  "scripts": {
+    "build": "babel src/ -d dist/",
+    "prepublishOnly": "yarn build"
+  }
+}
