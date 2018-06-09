@@ -1,6 +1,6 @@
 {
   "name": "hoc-with-store",
-  "version": "0.0.1",
+  "version": "0.1.0-0",
   "description": "Higher-order React component for binding a Redux Store",
   "main": "dist/index.js",
   "repository": "https://github.com/xaviervia/hoc-with-store",

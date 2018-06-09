@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default ({ getState, subscribe, dispatch }) => Target => {
+export default ({ getState, subscribe, dispatch }, mapStateToProps = (x => x), mapDispatchToProps = (x => x)) => Target => {
   class WithStore extends Component {
     constructor() {
       super()
@@ -17,7 +17,13 @@ export default ({ getState, subscribe, dispatch }) => Target => {
     }
 
     render() {
-      return <Target {...{ ...this.state.storeState, ...this.props }} dispatch={dispatch} />
+      return <Target
+        {...{
+          ...mapStateToProps(this.state.storeState),
+          ...mapDispatchToProps(dispatch),
+          ...this.props
+        }}
+      />
     }
   }
 
